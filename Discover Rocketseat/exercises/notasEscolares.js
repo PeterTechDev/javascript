@@ -7,10 +7,10 @@
 // * entre 60 - 69   -   D
 // * menor que 60    -   F
 
-let grade = 99;
+let grade = -1;
 
-const table = (grade) => {
-    if (grade < 60) {
+const getGrade = (grade) => {
+    if (grade < 60 && grade >=0) {
         console.log('F');
     } else if (grade >= 60 && grade <= 69) {
         console.log('D');
@@ -20,6 +20,8 @@ const table = (grade) => {
         console.log('B');
     } else if (grade >= 90) {
         console.log('A');
+    } else {
+        console.log('Nota Inválida');
     }
 }
-table(grade)
+getGrade(grade)
